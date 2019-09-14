@@ -64,7 +64,7 @@ order.
  
  
  ```bash
-GET /api/performance_metric/?date=2017-06-01&group_by=os&country=us&sort_by_revenue=desc
+    GET /api/performance_metric/?date=2017-06-01&group_by=os&country=us&sort_by_revenue=desc
 ```
 
     
