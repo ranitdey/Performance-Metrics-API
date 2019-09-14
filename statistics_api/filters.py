@@ -17,7 +17,7 @@ class UserFilter(FilterSet):
     group_by = CharFilter(method='group_by_filter')
 
     def group_by_filter(self, queryset, name, value):
-        params = [x.strip() for x in value.split(',')]
+        params = [val.strip() for val in value.split(',')]
         return queryset.values(*params).annotate(clicks=Sum('clicks'), impressions=Sum('impressions'),
 
                                                  installs=Sum('installs'), revenue=Sum('revenue'), spend=Sum('spend'))
