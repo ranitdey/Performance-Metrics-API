@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
 
 # Create your views here.
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics
-from rest_framework.generics import ListAPIView
-
 from statistics_api.filters import UserFilter
 from statistics_api.models import PerformanceMetric
 from statistics_api.serializers import MetricSerializer
