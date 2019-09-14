@@ -20,8 +20,11 @@ from rest_framework.routers import DefaultRouter
 
 from statistics_api.views import PerformanceListFilter
 
-
+router = DefaultRouter()
 urlpatterns = [
-    path('performance/', PerformanceListFilter.as_view(), name='performance'),
+    path('admin/', admin.site.urls),
+    path('api/', include('statistics_api.urls')),
 ]
 
+
+urlpatterns.extend(router.urls)
