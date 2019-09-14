@@ -41,6 +41,7 @@ http://127.0.0.1:8000/api/performance_metric/
  country, sorted by clicks in descending order.
  
  
+ 
 
     GET /api/performance_metric/?before_date=2017-06-01&group_by=channel,country&sort_by_clicks=desc
 
@@ -50,6 +51,7 @@ http://127.0.0.1:8000/api/performance_metric/
 order.
  
  
+ 
 
     GET /api/performance_metric/?os=ios&after_date=2017-04-30&before_date=2017-06-1&group_by=date&sort_by_date=asc
 
@@ -57,11 +59,13 @@ order.
 * Show revenue, earned on June 1, 2017 in US, broken down by operating system and sorted by revenue in descending order.
  
  
+ 
 
     GET /api/performance_metric/?date=2017-06-01&group_by=os&country=us&sort_by_revenue=desc
 
 
 * Show CPI and spend for Canada (CA) broken down by channel ordered by CPI in descending order.
+ 
  
  
 
