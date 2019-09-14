@@ -9,8 +9,8 @@ class UserFilter(FilterSet):
     channel = CharFilter(lookup_expr='icontains')
     country = CharFilter(lookup_expr='icontains')
     os = CharFilter(lookup_expr='icontains')
-    start_date = DateFilter(field_name='date', lookup_expr='gte')
-    end_date = DateFilter(field_name='date', lookup_expr='lte')
+    after_date = DateFilter(field_name='date', lookup_expr='gt')
+    before_date = DateFilter(field_name='date', lookup_expr='lt')
     date = DateFilter(field_name='date', lookup_expr='exact')
 
     # group by
@@ -20,7 +20,7 @@ class UserFilter(FilterSet):
         params = [x.strip() for x in value.split(',')]
         return queryset.values(*params).annotate(clicks=Sum('clicks'), impressions=Sum('impressions'),
 
-                                                 installs=Sum('installs'), revenues=Sum('revenue'))
+                                                 installs=Sum('installs'), revenue=Sum('revenue'), spend=Sum('spend'))
     # sorting
     sort_by_date = CharFilter(method='sort_by_date_filter')
     sort_by_channel = CharFilter(method='sort_by_channel_filter')

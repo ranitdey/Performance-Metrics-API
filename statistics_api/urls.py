@@ -22,6 +22,6 @@ from statistics_api.views import PerformanceListFilter
 
 
 urlpatterns = [
-    path('performance/', PerformanceListFilter.as_view(), name='performance'),
+    path('performance_metric/', PerformanceListFilter.as_view(), name='performance'),
 ]
 
