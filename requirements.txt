@@ -1,6 +1,6 @@
 Django==2.2.5
 django-filter==2.2.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 numpy==1.17.2
 pandas==0.25.1
 pi==0.1.2
